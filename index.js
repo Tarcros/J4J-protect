@@ -18,38 +18,6 @@ bot.Variables({
 
 bot.MessageEvent()
 bot.MessageEditEvent()
-const fs = require('fs');
-const {
-    notDeepEqual
-} = require("assert");
-const {
-    time
-} = require("console");
-const folders = fs.readdirSync("./commands/")
-
-for (const files of folders) {
-    const folder = fs.readdirSync(`./commands/${files}/`).filter(file => file.endsWith(".js"))
-
-    for (const commands of folder) {
-        const command = require(`./commands/${files}/${commands}`)
-        bot.Command({
-            name: command.name,
-            aliases: command.aliases,
-            description: command.description,
-            api: command.api,
-            code: command.code,
-        })
-    }
-}
-
-bot.Command({
-  name: "say",
-  code: `
- $message[]
- $deletecommand[1ms]
- $onlyAdmin[]
-  `
-})
 
 bot.Status({
         0: {
