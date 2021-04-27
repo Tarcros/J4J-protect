@@ -232,7 +232,7 @@ bot.LoopCommand({
  code:`
 <a:world:835629608212365342> **You need a other j4j server? Join pls: **
 https://discord.gg/QtJsyfzkPd
-$useChannel[833192582988300318]
+$useChannel[835529871119482931]
 `
-}, 1000)
+}, 900000)
 
