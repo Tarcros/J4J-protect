@@ -44,7 +44,7 @@ bot.Command({
 
 
 bot.ReadyCommand({
-  name: "821160672196296745",
+  name: "835529885468196924",
   code:`
 <a:aemeraud:835090714131431425> **Bot statut**
 $description[<:online:819329223956496415>**BOT ON**
