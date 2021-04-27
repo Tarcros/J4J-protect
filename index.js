@@ -115,10 +115,10 @@ code: `
 $deletecommand[1ms]
 $deleteIn[3s]
 <@$authorID> **The j4j is not allowed in this channel, if you want j4j go to <#$channelID[\🍀・j4j・fast]> or <#$channelID[\🎋・j4j・ads]> **
-<:data:825764770799943722> **Ping Anti j4j: \`$ping\`ms !**
+<:data:819559106930933770> **Ping Anti j4j: \`$ping\`ms !**
 $onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;]
 $onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[ξ・🌸・owo];$channelID[ξ・☕・mudae];$channelID[💬・chat];]
-
+$suppressErrors[]
 `})
 
 
@@ -218,3 +218,21 @@ bot.Command({
  $onlyAdmin[]
   `
 })
+
+bot.LoopCommand({
+ name: "this can be anything, its just reference",
+ code:`
+<:hunter:819345750969679912> **Dont forgot, if you find a bot or a scammer pls report him in <#$channelID[⛔・reports]> <:verifiedblack:833182310995460176>**
+$useChannel[$channelID[🍀・j4j・fast]]
+`
+}, 1500000)
+
+bot.LoopCommand({
+ name: "this can be anything, its just reference",
+ code:`
+<a:world:835629608212365342> **You need a other j4j server? Join pls: **
+https://discord.gg/QtJsyfzkPd
+$useChannel[$channelID[🍀・j4j・fast]]
+`
+}, 900000)
+
