@@ -91,26 +91,6 @@ $useChannel[$channelID[📶・news・bot]]
 
 
 
-bot.Command({
-name: "nuke",
-code: `
-
-$cloneChannel[$channelID]
-$deleteChannels[$channelID]
-$onlyAdmin[]
-`
-})
-
-bot.JoinedCommand({
-name: "821092848693805076",
-code: `
-<a:pink:817180235698929685> **Boost us pls <#821092849570414612> **
-$deleteIn[1s]
-`
-})
-bot.onJoined()
-
-
 bot.SpaceCommand({
 name: "any name here, anyways it'll trigger xd",
 code: `
