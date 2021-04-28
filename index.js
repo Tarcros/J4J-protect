@@ -31,10 +31,15 @@ bot.Status({
     }, 13000)
 
 bot.Command({
-  name: "jail",
+  name: "<@835249397875867648>",
   code: `
-
- $deletecommand[1ms]
+$author[JOIN FOR JOIN 🍀 Protect🍀;https://media.discordapp.net/attachments/835529827104325643/837107307413635102/c2c3dc65ac04dd47cbcf5e8ee2c35722.gif]
+$description[ <:certificationblack:835619426690531358> **Hey! I'm <@835249397875867648>, the bot that takes care of the protection of the server {hyper:JOIN FOR JOIN 🍀:https://discord.gg/C8HsMHHWwe}.
+<:off:836004165968855060> **Unfortunately I am a \`personalized\` and \`private\` bot made by <@823360230280658974> so you cant use me..**
+]
+$thumbnail[https://media.discordapp.net/attachments/835529827104325643/837107307413635102/c2c3dc65ac04dd47cbcf5e8ee2c35722.gif]
+ $color[36393e]
+$deleteIn[15s]
  $suppressErrors
   `
 })
