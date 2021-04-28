@@ -46,11 +46,11 @@ bot.Command({
 bot.ReadyCommand({
   name: "835529885468196924",
   code:`
-<:on:836004165733711873>> **Bot statut**
+<:on:836004165733711873> **Bot statut**
 $description[<:online:819329223956496415>**BOT ON**
 <:setting:769375912751529985> **Uptime started** \`$uptime\`]
 $addTimestamp
-$footer[・JOIN FOR JOIN 🍀 Protect🍀・Restarted]
+$footer[🍀・JOIN FOR JOIN 🍀 Protect 🛡️・Restarted]
 
 $color[36393e]
 `
