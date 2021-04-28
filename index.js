@@ -227,12 +227,4 @@ $useChannel[$channelID[🍀・j4j・fast]]
 `
 }, 1500000)
 
-bot.LoopCommand({
- name: "this can be anything, its just reference",
- code:`
-<a:world:835629608212365342> **You need a other j4j server? Join pls: **
-https://discord.gg/QtJsyfzkPd
-$useChannel[835529871119482931]
-`
-}, 900000)
 
