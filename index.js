@@ -79,6 +79,13 @@ $onlyAdmin[]
 `
 })
 
+bot.Command({
+name: "ping",
+code: `
+**<:data:819559106930933770> My Ping: \`$ping\`ms**
+`
+})
+
 bot.LoopCommand({
  name: "this can be anything, its just reference",
  code:`
