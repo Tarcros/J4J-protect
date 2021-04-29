@@ -111,8 +111,9 @@ $deleteIn[3s]
 <@$authorID> **The j4j is not allowed in this channel, if you want j4j go to <#$channelID[\🍀・j4j・fast]> or <#$channelID[\🎋・j4j・ads]> **
 <:data:819559106930933770> **Ping Anti j4j: \`$ping\`ms !**
 $onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;J4j;]
-$onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[ξ・🌸・owo];$channelID[ξ・☕・mudae];$channelID[💬・chat];]
+$onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[╭・ξ・🌸・owo];$channelID[╰・ξ・☕・mudae];$channelID[💬・chat];]
 $suppressErrors[]
+
 `})
 
 
