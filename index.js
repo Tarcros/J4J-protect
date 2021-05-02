@@ -84,7 +84,7 @@ name: "ping",
 code: `
 $description[<a:a_Loading_Pixels:835623379591364608>** Loading bot ping...**]
 $color[36393e]
-$editIn[$pings;;{description:**<:data:819559106930933770> My Ping: \`$ping\`ms**} {color:36393e}]
+$editIn[$ping;;{description:**<:data:819559106930933770> My Ping: \`$ping\`ms**} {color:36393e}]
 `
 })
 
