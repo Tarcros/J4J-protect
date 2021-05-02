@@ -2,7 +2,7 @@
 const discordScript = require("discordbot-script")
  
 const bot = new discordScript({
-  token: "ODM1MjQ5Mzk3ODc1ODY3NjQ4.YIMsng.KJ4Eh1Zh4kxTHyQFjUILULnZJqI",
+  token: "ODM1MjQ5Mzk3ODc1ODY3NjQ4.YIMsng.s2Xyr8AKWawv9wo64zKIUnlL_Cc",
   prefix: [","]
 })
  
@@ -82,7 +82,9 @@ $onlyAdmin[]
 bot.Command({
 name: "ping",
 code: `
-**<:data:819559106930933770> My Ping: \`$ping\`ms**
+$description[<a:a_Loading_Pixels:835623379591364608>** Loading bot ping...**]
+$color[36393e]
+$editIn[$pings;;{description:**<:data:819559106930933770> My Ping: \`$ping\`ms**} {color:36393e}]
 `
 })
 
