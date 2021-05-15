@@ -188,7 +188,7 @@ $useChannel[$channelID[🍀・j4j・fast]]
 
 
 bot.JoinedCommand({
-name: "764447297815314462",
+name: "835529896520450108",
 code: `
 
 $dm[$authorID] 
