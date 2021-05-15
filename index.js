@@ -230,3 +230,26 @@ $dm[$authorID]
 
 $onlyAdmin[]
 `})
+
+bot.Command({
+name: "scam",
+code: `
+
+$deletecommand[10s]
+$deleteIn[60s]
+$color[ff0000]
+$author[New Scammer: $username[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
+$description[**<:success:821885973012807691> <@$mentioned[1;yes]> has just received the role scammer because he has __scam__:**
+Reason: **" $message[] "**
+<:staffcertified:834979467419844628> **Staff reporter:** <@$authorID> 
+ <a:question:822003900252684308> **Thx for the report! (Delete in 60s <<a:60:836617337851478076>)**
+ 
+ ]
+
+$giveRole[$mentioned[1;yes];$roleID[💢・Scammer];$noMentionMessage[]]
+  $argsCheck[>2;{description:**<:16211155394555210:843244763910242374> The command was misused**\nUsage: \`,scam @user Report by <reporter name> - Reason\`} {color:ff0000}]
+$onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;]
+
+`
+})
+
