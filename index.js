@@ -30,19 +30,6 @@ bot.Status({
         }
     }, 13000)
 
-bot.Command({
-  name: "<@835249397875867648>",
-  code: `
-$author[JOIN FOR JOIN 🍀 Protect🍀;https://media.discordapp.net/attachments/835529827104325643/837107307413635102/c2c3dc65ac04dd47cbcf5e8ee2c35722.gif]
-$description[ <:certificationblack:835619426690531358> **Hey! I'm <@835249397875867648>, the bot that takes care of the protection of the server {hyper:JOIN FOR JOIN 🍀:https://discord.gg/C8HsMHHWwe}.
-<:off:836004165968855060> **Unfortunately I am a \`personalized\` and \`private\` bot made by <@823360230280658974> so you cant use me..**
-]
-$thumbnail[https://media.discordapp.net/attachments/835529827104325643/837107307413635102/c2c3dc65ac04dd47cbcf5e8ee2c35722.gif]
- $color[36393e]
-$deleteIn[15s]
- $suppressErrors
-  `
-})
 
 // DM JAIL
 
@@ -62,13 +49,6 @@ $color[36393e]
 })
 
 
-bot.LoopCommand({
- name: "this can be anything, its just reference",
- code:`
-**<:protecwarn:820575764407517184> Don't forgot report when you find a __Bot__ or a __Scammers__ in <#$channelID[⛔・reports]> ! __It is important !__** <:protecwarns:820575764427833344>
-$useChannel[$channelID[🍀・j4j・fast]]
-`
-}, 1920000)
 
 
 bot.Command({
@@ -112,7 +92,7 @@ $deletecommand[1ms]
 $deleteIn[3s]
 <@$authorID> **The j4j is not allowed in this channel, if you want j4j go to <#$channelID[\🍀・j4j・fast]> or <#$channelID[\🎋・j4j・ads]> **
 <:data:819559106930933770> **Ping Anti j4j: \`$ping\`ms !**
-$onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;J4j;J4J;jfj;jFj;j2J;J2J;Join For Join;JFJ;JFj;JfJ;Jfj;]
+$onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;J4j;J4J;jfj;jFj;j2J;J2J;Join For Join;JFJ;JFj;JfJ;Jfj;d4d;]
 $onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[╭・ξ・🌸・owo];$channelID[╰・ξ・☕・mudae];$channelID[💬・chat];]
 $suppressErrors[]
 
@@ -222,6 +202,49 @@ bot.LoopCommand({
 <:hunter:819345750969679912> **Dont forgot, if you find a bot or a scammer pls report him in <#$channelID[⛔・reports]> <:verifiedblack:833182310995460176>**
 $useChannel[$channelID[🍀・j4j・fast]]
 `
-}, 1500000)
+}, 600000)
 
 
+bot.JoinedCommand({
+name: "764447297815314462",
+code: `
+
+$dm[$authorID] 
+ \ <a:greenflower:838147359660834846> **Hey <@$authorID>, Welcome to the server \`JOIN FOR JOIN 🍀\` !**  <a:greenbutter:835721069099745290> 
+
+ <a:world:835629608212365342> **・One of the most active j4j servers! If you want to know how to __gain members__ check the channel <#$channelID[\🎎・discord]> and go j4j in <#$channelID[\🍀・j4j・fast]>  ** ! \<a:greenbutter:835721069099745290> 
+
+  <a:greenflowersse:835629606681444382> **Also joins our other servers!** <a:greenflower:838147359660834846>
+  
+ ₊˚ \🎋 ✦・⁺﹒ Anime \🌸 Chill \🍀 | Emotes & Nitro Giveaways  ︶꒷꒦
+  🌸  **We are a fun and chill aesthetically pleasing anime server to hangout in! We do nitro drops and giveaways !** https://discord.gg/bCBaqFEGs3
+
+\n
+ \🌙・Server List 
+:dizzy: **Looking for other server of a very specific type (j4j, gif, nitro, anime)? This server will allow you to easily find some!** https://discord.gg/E5Yd2Ehxs9
+
+
+`
+})
+bot.onJoined()
+
+bot.Command({
+  name: "dmwelcome",
+code: `
+
+$dm[$authorID] 
+ \ <a:greenflower:838147359660834846> **Hey <@$authorID>, Welcome to the server \`JOIN FOR JOIN 🍀\` !**  <a:greenbutter:835721069099745290> 
+
+ <a:world:835629608212365342> **・One of the most active j4j servers! If you want to know how to __gain members__ check the channel <#$channelID[\🎎・discord]> and go j4j in <#$channelID[\🍀・j4j・fast]>  ** ! \<a:greenbutter:835721069099745290> 
+
+  <a:greenflowersse:835629606681444382> **Also joins our other servers!** <a:greenflower:838147359660834846>
+  
+ ₊˚ \🎋 ✦・⁺﹒ Anime \🌸 Chill \🍀 | Emotes & Nitro Giveaways  ︶꒷꒦
+  🌸  **We are a fun and chill aesthetically pleasing anime server to hangout in! We do nitro drops and giveaways !** https://discord.gg/bCBaqFEGs3
+
+\n
+ \🌙・Server List 
+:dizzy: **Looking for other server of a very specific type (j4j, gif, nitro, anime)? This server will allow you to easily find some!** https://discord.gg/E5Yd2Ehxs9
+
+$onlyAdmin[]
+`})
