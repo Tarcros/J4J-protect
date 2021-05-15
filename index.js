@@ -121,24 +121,6 @@ $suppressErrors[{description:An error has been produced} {color:ff0000} ]
 })
 
 
-bot.Command({
-name: "scam",
-code: `
-
-$deletecommand[10s]
-$deleteIn[60s]
-$color[ff0000]
-$author[New Scammer: $username[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
-$description[**<:success:821885973012807691> <@$mentioned[1;yes]> has just received the role scammer because he has __scam__:**
- \`\`\`\$noMentionMessage\`\`\`\<:staffcertified:834979467419844628> **Staff reporter:** <@$authorID> **( <@&$highestRole[$authorID]>)**
- <a:question:822003900252684308> **Thx for the report! (Delete in 60s <a:as:835319465553952779>)**
-]
-$giveRole[$mentioned[1;yes];821092713117515797;$NoMentionMessage]
-  $argsCheck[>2;{description:**<:error:821885996064833577> The command was misused**\nUsage: \`,scam @user Report by <reporter name> - Reason\`} {color:ff0000}]
-$onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;]
-$suppressErrors[{description:An error has been produced} {color:ff0000} ]
-`
-})
 
 bot.Command({
   name: "rankup",
