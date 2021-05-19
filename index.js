@@ -2,7 +2,7 @@
 const discordScript = require("discordbot-script")
  
 const bot = new discordScript({
-  token: "ODM1MjQ5Mzk3ODc1ODY3NjQ4.YIMsng.s2Xyr8AKWawv9wo64zKIUnlL_Cc",
+  token: "ODQ0NTgxNDAxMzE5NTcxNTQ2.YKUfuQ.3LhHNGODCcMbZHBjB-dBItgNEVU",
   prefix: [","]
 })
  
