@@ -187,49 +187,7 @@ $useChannel[$channelID[🍀・j4j・fast]]
 }, 600000)
 
 
-bot.JoinedCommand({
-name: "835529896520450108",
-code: `
 
-$dm[$authorID] 
- \ <a:greenflower:838147359660834846> **Hey <@$authorID>, Welcome to the server \`JOIN FOR JOIN 🍀\` !**  <a:greenbutter:835721069099745290> 
-
- <a:world:835629608212365342> **・One of the most active j4j servers! If you want to know how to __gain members__ check the channel <#$channelID[\🎎・discord]> and go j4j in <#$channelID[\🍀・j4j・fast]>  ** ! \<a:greenbutter:835721069099745290> 
-
-  <a:greenflowersse:835629606681444382> **Also joins our other servers!** <a:greenflower:838147359660834846>
-  
- ₊˚ \🎋 ✦・⁺﹒ Anime \🌸 Chill \🍀 | Emotes & Nitro Giveaways  ︶꒷꒦
-  🌸  **We are a fun and chill aesthetically pleasing anime server to hangout in! We do nitro drops and giveaways !** https://discord.gg/bCBaqFEGs3
-
-\n
- \🌙・Server List 
-:dizzy: **Looking for other server of a very specific type (j4j, gif, nitro, anime)? This server will allow you to easily find some!** https://discord.gg/E5Yd2Ehxs9
-
-
-`
-})
-bot.onJoined()
-
-bot.Command({
-  name: "dmwelcome",
-code: `
-
-$dm[$authorID] 
- \ <a:greenflower:838147359660834846> **Hey <@$authorID>, Welcome to the server \`JOIN FOR JOIN 🍀\` !**  <a:greenbutter:835721069099745290> 
-
- <a:world:835629608212365342> **・One of the most active j4j servers! If you want to know how to __gain members__ check the channel <#$channelID[\🎎・discord]> and go j4j in <#$channelID[\🍀・j4j・fast]>  ** ! \<a:greenbutter:835721069099745290> 
-
-  <a:greenflowersse:835629606681444382> **Also joins our other servers!** <a:greenflower:838147359660834846>
-  
- ₊˚ \🎋 ✦・⁺﹒ Anime \🌸 Chill \🍀 | Emotes & Nitro Giveaways  ︶꒷꒦
-  🌸  **We are a fun and chill aesthetically pleasing anime server to hangout in! We do nitro drops and giveaways !** https://discord.gg/bCBaqFEGs3
-
-\n
- \🌙・Server List 
-:dizzy: **Looking for other server of a very specific type (j4j, gif, nitro, anime)? This server will allow you to easily find some!** https://discord.gg/E5Yd2Ehxs9
-
-$onlyAdmin[]
-`})
 
 bot.Command({
 name: "scam",
