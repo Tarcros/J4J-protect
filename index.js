@@ -215,16 +215,10 @@ $onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;]
 bot.Command({
   name: "nogw",
   code: `
-  $giveRole[$authorID;$roleID[・no gw]]
-  $deletecommand[45000ms]
-  $thumbnail[$authorAvatar]
-  $deleteIn[45s]
-  $description[
-  <:arrowgreen:842505305454936086> **Sorry for the fact that you don't like ping for Nitro Giveaways, I have added a role to you that will allow you to no longer receive ping.** <:verifiedblack:833182310995460176>
-  ・Sorry again, have a nice stay with us! <a:clover:830789995140743178>
-]
-  $color[36393e]
-  $blackListRoles[$roleID[・no gw];{description:**<:uncertificationblack:836424264525152256> You already have the role <@&$roleID[・no gw]> .** *(You cant see gw.)*} {color:ff0000}]
+   $deletecommand[45000ms]
+
+$blackListRoles[$roleID[・no gw];{description:**<:uncertificationblack:836424264525152256> You already have the role <@&$roleID[・no gw]> .** *(You cant see gw.)*} {color:ff0000}]
+$cooldown[3m;]
 `})
 
 
@@ -232,17 +226,10 @@ bot.Command({
 bot.Command({
   name: "addgw",
   code: `
-  $takeRole[$authorID;$roleID[・no gw]]
   $deletecommand[45000ms]
-  $thumbnail[$authorAvatar]
-  $deleteIn[45s]
-  $description[
-  <:arrowgreen:842505305454936086> **You finally changed your mind, thank you, you can now have access to our giveaways and receive the pings.** <:verifiedblack:833182310995460176>
-  ・Thanks again for your trust, you wouldn't regret it! <a:clover:830789995140743178>
-]
-  $color[36393e]
   
  $onlyForRoles[$roleID[・no gw];{description:**<:uncertificationblack:836424264525152256> You already remove the role <@&$roleID[・no gw]> .** *(You can see gw.)*} {color:ff0000}]
+$cooldown[3m;]
 `})
 
 
