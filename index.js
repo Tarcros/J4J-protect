@@ -462,3 +462,34 @@ bot.Command({
  `
 })
 
+bot.LoopCommand({
+ name: "this can be anything, its just reference",
+ code:`
+ $color[36393e]
+$description[<a:help:846518929723359272> **You need report someone who scam you or you need report a bot please report in <#$channelID[⛔・reports]>, use \`?tag report\` in <#$channelID[💻・commands]> for more infos.**
+]
+$useChannel[$channelID[🍀・j4j・fast]]
+
+`
+}, 3600000 )
+
+
+bot.LoopCommand({
+ name: "this can be anything, its just reference",
+ code:`
+ $deleteIn[1ms]
+<a:boostgreen:844446002404524052> **Dont forgot check perks of boosters**
+$useChannel[$channelID[💎・booster・perks]]
+
+`
+}, 28800000)
+
+bot.LoopCommand({
+ name: "this can be anything, its just reference",
+ code:`
+ $deleteIn[1ms]
+<a:clover:830789995140743178> **Dont forgot check the roles you can get in our server for support us**
+$useChannel[$channelID[💝・support・us]]
+
+`
+}, 28800000)
