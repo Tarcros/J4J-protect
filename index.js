@@ -54,21 +54,13 @@ $color[36393e]
 
 
 
-
-bot.Command({
-name: "bancount",
-code: `
-<:IconMembers:819348997533204490> The server has **$bansCount[784668907264147477]** members banned.
-$onlyAdmin[]
-`
-})
-
 bot.Command({
 name: "ping",
 code: `
 $description[<a:a_Loading_Pixels:835623379591364608>** Loading bot ping...**]
 $color[36393e]
 $editIn[$ping;;{description:**<:data:819559106930933770> My Ping: \`$ping\`ms**} {color:36393e}]
+$onlyAdmin[]
 `
 })
 
