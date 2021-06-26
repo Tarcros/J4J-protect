@@ -232,4 +232,233 @@ $cooldown[3m;]
 `})
 
 
+bot.Command({
+    name: "categorycount",
+   aliases: ["cgc"],
+code: `
+
+At the moment, the server has $replaceText[$replaceText[$checkCondition[$categoryCount==0];true;\`no\`];false;\`$categoryCount\`] **categories** created <:categorie:759899157401567274>.
+$onlyAdmin[]
+`
+})
+
+bot.Command({
+ name: "channelcount",
+   aliases: ["cc"],
+code: `
+At the moment, the server has $replaceText[$replaceText[$checkCondition[$channelCount==0];true;\`no\`];false;\`$channelCount\`] **channels** created <:channel:759898754433679400>.
+$onlyAdmin[]
+`
+  })
+
+bot.Command({
+   name: "statusconfig",
+   aliases: ["sc","etat"],
+    code: `
+    $title[<:configs:850845714531090444> Server configuration status ]
+    $description[
+
+      $addField[Edit Message;
+$replaceText[$replaceText[$checkCondition[$getServerVar[messageedit]==Nothing];true;<:error:850913520466919450>];false;<:success:850913520408068098>] **Edit message**: \`$getServerVar[messageedit]\`
+;yes]
+         $addField[Edit Channel;
+$replaceText[$replaceText[$checkCondition[$getServerVar[channeledit]==Nothing];true;<:error:850913520466919450>];false;<:success:850913520408068098>] **Edit channel**: \`$getServerVar[channeledit]\`
+;yes]
+          $addField[Embed Channel;
+$replaceText[$replaceText[$checkCondition[$getServerVar[channelembed]==Nothing];true;<:error:850913520466919450>];false;<:success:850913520408068098>] **Embed channel**: \`$getServerVar[channelembed]\`
+;yes]
+$onlyAdmin[]
+`
+  
+   })
+
+bot.Command({
+   name: "joke",
+    code: `
+    $title[$api[https://sv443.net/jokeapi/v2/joke/Any;setup]]
+    $color[$random[0;999999]]
+    $description[$api[https://sv443.net/jokeapi/v2/joke/Any;delivery]]
+    $onlyAdmin[]
+    `
+  
+   })
+
+bot.Command({
+name: "setup",
+  aliases: ["config"],
+code: `
+$title[ <:configs:850845714531090444> Big setup bot]
+$description[ **Soon....**
+
+$addField[<:IconCommingSoon:850903127640113214> <:verysoon:850903127493312562> Soon..;
+\`\`\` Soon... \`\`\`
+;yes]
+$addField[<:server:850898021821579334> Setup server:;
+\`\`\` $server \`\`\`
+;yes]
+$addField[<:IconLogs:850897164255232010> Setup logs:;
+\`\`\` $logs \`\`\`
+;yes]
+$addField[<:whiteedit:850893362873892905> Setup edit:;
+\`\`\` $edit \`\`\`
+;yes]
+$addField[<:IconEmbed:850893363397263370> Setup embed:;
+\`\`\` $embed \`\`\`
+;yes]
+$addField[<:IconGoToMessage:850895606524149780> Setup welcomer:;
+\`\`\` $welcome \`\`\`
+;yes]
+
+]
+$color[36393F]
+$onlyAdmin[]
+`
+})
+
+bot.Command({
+name: "seteditmsg",
+  aliases: ["messageedit", "msgedit", "editmsg", "editmessage"], 
+code: `
+$setServerVar[messageedit;$message[]]
+$deletecommand[30000ms]
+$deleteIn[30s]
+  <:success:850913520408068098> **Message ID for i edit is \`$message[]\`**
+  $onlyIf[$isNumber[$message[1]]==true;You can't put a invalid id message ]
+$onlyAdmin[]
+
+`
+})
+
+bot.Command({
+name: "seteditchannel",
+  aliases: ["channeledit", "cedit", "editc", "editchannel"], 
+code: `
+$setServerVar[channeledit;$mentionedChannels[1]]
+$deletecommand[30000ms]
+$deleteIn[30s]
+<:success:850913520408068098> **Channel ID for the edit is <#$mentionedChannels[1]> (\`$message[]\`)**
+$onlyIf[$channelExists[$findChannel[$message[]]]==true;That's not a channel]
+$onlyAdmin[]
+`
+})
+
+bot.Command({
+name: "edit",
+code: `
+$deletecommand[3000ms]
+$deleteIn[3s]
+<:systeme1:850824160267206698><:systeme2:850824160313999370><:systeme3:850824160216481823> **Message edited.**
+$editMessage[$getServerVar[channeledit];$getServerVar[messageedit];$message[]]
+$onlyIf[$getServerVar[messageedit]!=Nothing;{description:<:error:850913520466919450> **The message for edit not set, make the command, make the command \`$messageedit ID_Message\`**}{color:ff0000}]
+$onlyIf[$getServerVar[channeledit]!=Nothing;{description:<:error:850913520466919450> **The channel for edit not set, make the command \`$channeledit #channel\`**}{color:ff0000}]
+$onlyIf[$message[1]!=;<:error:850913520466919450> **You didn't say anything, to make an edit you have to do the command \`$variable\` or \`$channeledit\` and \`$messageedit\`.**]
+$onlyAdmin[]
+`
+})
+
+bot.Command({
+  name: "embed",
+  code: `
+ 
+  $deletecommand[3ms]
+  $channelSendMessage[$getServerVar[channelembed];$message[]]
+   $onlyIf[$message[1]!=;<:error:850913520466919450> **You didn't say anything, to make an embed you have to do the command \`$variable\` .**]
+  $onlyIf[$getServerVar[channelembed]!=Nothing;{description:<:error:850913520466919450> **The channel to send an embed has not yet been defined, make the command \`$channelembed #channel\`**}{color:ff0000}]
+ 
+  $onlyAdmin[]
+`})
+
+
+bot.Command({
+  name: "channelembed",
+  aliases: ["embedc","channele","embedchannel"],
+  code: `
+  $deletecommand[10000ms]
+  $deleteIn[15s]
+  $description[
+<:Verified:850830649351077899> **Channel embed send definied {hyper:success:$message[]} \`($mentionedChannels[1])\`.** ]
+  $setServerVar[channelembed;$mentionedChannels[1]]
+  $onlyIf[$channelExists[$findChannel[$message[]]]==true;That's not a channel]
+  $onlyAdmin[]
+`})
+
+
+bot.Command({
+  name: "setupembed",
+  aliases: ["setembed","configembed"],
+  code: `
+ 
+ $description[
+ 
+<:configs:850845714531090444> **Channel Config: **
+ \`$getServerVar[channelembed]\`
+ \`\`\` $channelembed #channel  \`\`\` 
+ 
+ 
+ ]
+ $color[36393F]
+`})
+
+bot.Command({
+  
+  name: "snipe",
+code:`
+$channelSendMessage[$channelID[];{description:$getChannelVar[usertext]}{author:$getChannelVar[username]}{authoricon:$getChannelVar[useravatar]}{timestamp}{color:RANDOM}]
+$onlyIf[$getChannelVar[usertext]!=;{title::x: Something went wrong!}{color:d0321d}{description:There is nothing to snipe!}]
+$onlyAdmin[]
+`
+})
+
+bot.Command({
+   name: "variable",
+ code: `
+ $color[36393F]
+ 
+ $description[
+ <:settings:850845365003223090> **Here are all the variables you can use on the bot.**
+ $addField[<:addfield:850966075033387058> Field;
+\`\`\`{field:TITLE:BODY:yes/no}\`\`\`
+;yes]
+ $addField[<:attachement:850959565361381377> Attachement;
+\`\`\`{attachment}\`\`\`
+;yes]
+  $addField[<:Timestamp:850959565331628043> Timestamp;
+\`\`\`{timestamp}\`\`\`
+;yes]
+ $addField[<:images:850959565184565259> Image;
+\`\`\`{image:IMAGEURL}\`\`\`
+;yes]
+   $addField[<:footer2:850959565305806848> FooterIcon;
+\`\`\`{footericon:IMAGEURL}\`\`\`
+;yes]
+ $addField[<:footer:850959565431242812> Footer;
+\`\`\` {footer:STUFF HERE}\`\`\`
+;yes]
+  $addField[<:image:850959565125320725> Thumbnail;
+\`\`\`{thumbnail:IMAGEURL}\`\`\`
+;yes]
+ $addField[<:color:850959564849020979> Color;
+\`\`\` {color:COLOR}\`\`\`
+;yes]
+   $addField[<:authorIcon:850966075016609852> AuthorIcon;
+\`\`\`{authoricon:IMAGEURL}\`\`\`
+;yes]
+ $addField[<:author:850959565075644416> Author;
+\`\`\`{author:STUFF HERE}\`\`\`
+;yes]
+  $addField[<:title:850966075108622386> Title;
+\`\`\`{title:STUFF HERE}\`\`\`
+;yes]
+ $addField[<:rr:850959564957810708> Description;
+\`\`\`{description:TEXT}\`\`\`
+;yes]
+ 
+ 
+ 
+ ]
+ $footer[For more help make the command $support;https://images-ext-1.discordapp.net/external/mAOeFbfJExEySphC00eDc8Xdvx-LjxMvFPJkmq167aM/https/images-ext-2.discordapp.net/external/Y9A63cPGCVL68b-6taEwu9qDHHgF6BMWBpw_kL-qezU/https/images-ext-2.discordapp.net/external/TZV2fqBShHzofz9fhYUYZupLBVtMs7rH-MU9u3dR0gM/%25253Fsize%25253D128/https/cdn.discordapp.com/avatars/850572464794501140/f29fece4d87b52ff15eb84348161ccf1.webp]
+ $addTimestamp
+ $onlyAdmin[]
+ `
+})
 
