@@ -40,7 +40,7 @@ bot.ReadyCommand({
   code:`
 <:on:836004165733711873> **Bot statut**
 $description[<:online:819329223956496415>**BOT ON**
-<:setting:769375912751529985> **Uptime started** \`$uptime\`]
+<:setting:769375912751529985> **Uptime started**]
 $addTimestamp
 $footer[🍀・JOIN FOR JOIN 🍀 Protect 🛡️・Restarted]
 
@@ -84,20 +84,19 @@ $useChannel[$channelID[📶・news・bot]]
 }, 600000)
 
 
-
 bot.SpaceCommand({
-name: "any name here, anyways it'll trigger xd",
-code: `
-$deletecommand[1ms]
-$deleteIn[3s]
-<@$authorID> **The j4j is not allowed in this channel, if you want j4j go to <#$channelID[\🍀・j4j・fast]> or <#$channelID[\🎋・j4j・ads]> **
-<:data:819559106930933770> **Ping Anti j4j: \`$ping\`ms !**
-$onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;J4j;J4J;jfj;jFj;j2J;J2J;Join For Join;JFJ;JFj;JfJ;Jfj;d4d;join for join;jay for jay;]
-$onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[╭・ξ・🌸・owo];$channelID[╰・ξ・☕・mudae];$channelID[💬・chat];$channelID[・🗻˚₊・spam・bots];]
-$suppressErrors[]
-
-`})
-
+  name: "anti j4j",
+  code: `
+  $deleteIn[5s]
+ $deletecommand[1ms]
+ $color[36393e]
+$description[<:uncertificationblack:836424264525152256> <@$authorID> **The j4j is not allowed in this channel, if you want j4j go to <#$channelID[\🍀・j4j・fast]> or <#$channelID[\🎋・j4j・ads]> **
+<:data:819559106930933770> **Ping Anti j4j: \`$ping\`ms !** ]
+    $onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[╭・ξ・🌸・owo];$channelID[╰・ξ・☕・mudae];$channelID[💬・chat];$channelID[・🗻˚₊・spam・bots];]
+    $onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;J4j;J4J;jfj;jFj;j2J;J2J;Join For Join;JFJ;JFj;JfJ;Jfj;d4d;join for join;jay for jay;]
+  
+      `
+  })
 
 
 bot.Command({
