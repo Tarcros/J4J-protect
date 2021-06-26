@@ -64,21 +64,6 @@ $onlyAdmin[]
 `
 })
 
-bot.LoopCommand({
- name: "this can be anything, its just reference",
- code:`
- $color[36393e]
-📡** Bot News \`JOIN FOR JOIN BOT dev 🍀\`**
-$description[📡 \`$uptime\` **Uptime Bot**
-
-
-]
-$addTimestamp
-$thumbnail[$userAvatar[819691265142161428]]
-$useChannel[$channelID[📶・news・bot]]
-`
-}, 600000)
-
 
 bot.SpaceCommand({
   name: "anti j4j",
