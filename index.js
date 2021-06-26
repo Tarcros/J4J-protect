@@ -12,6 +12,10 @@ bot.Variables({
   iduserrankup: "nothing",
   idrolerankup: "nothing",
   idrolerankup2: "nothing",
+  channelembed: "nothing",
+  channeledit: "nothing",
+  messageedit: "nothing",
+ 
   
 })
 
@@ -283,37 +287,7 @@ bot.Command({
   
    })
 
-bot.Command({
-name: "setup",
-  aliases: ["config"],
-code: `
-$title[ <:configs:850845714531090444> Big setup bot]
-$description[ **Soon....**
 
-$addField[<:IconCommingSoon:850903127640113214> <:verysoon:850903127493312562> Soon..;
-\`\`\` Soon... \`\`\`
-;yes]
-$addField[<:server:850898021821579334> Setup server:;
-\`\`\` $server \`\`\`
-;yes]
-$addField[<:IconLogs:850897164255232010> Setup logs:;
-\`\`\` $logs \`\`\`
-;yes]
-$addField[<:whiteedit:850893362873892905> Setup edit:;
-\`\`\` $edit \`\`\`
-;yes]
-$addField[<:IconEmbed:850893363397263370> Setup embed:;
-\`\`\` $embed \`\`\`
-;yes]
-$addField[<:IconGoToMessage:850895606524149780> Setup welcomer:;
-\`\`\` $welcome \`\`\`
-;yes]
-
-]
-$color[36393F]
-$onlyAdmin[]
-`
-})
 
 bot.Command({
 name: "seteditmsg",
