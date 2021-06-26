@@ -419,7 +419,7 @@ bot.LoopCommand({
  $color[36393e]
 $description[<a:help:846518929723359272> **You need report someone who scam you or you need report a bot please report in <#$channelID[⛔・reports]>, use \`?tag report\` in <#$channelID[💻・commands]> for more infos.**
 ]
-$useChannel[$channelID[🍀・j4j・fast]]
+$useChannel[$channelID[841670861576470568]]
 
 `
 }, 3600000 )
@@ -430,7 +430,7 @@ bot.LoopCommand({
  code:`
  $deleteIn[1ms]
 <a:boostgreen:844446002404524052> **Dont forgot check perks of boosters**
-$useChannel[$channelID[💎・booster・perks]]
+$useChannel[$channelID[835529866228793385]]
 
 `
 }, 28800000)
@@ -440,7 +440,7 @@ bot.LoopCommand({
  code:`
  $deleteIn[1ms]
 <a:clover:830789995140743178> **Dont forgot check the roles you can get in our server for support us**
-$useChannel[$channelID[💝・support・us]]
+$useChannel[$channelID[835529832413659196]]
 
 `
 }, 28800000)
