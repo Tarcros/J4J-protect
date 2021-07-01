@@ -422,7 +422,7 @@ $description[<a:help:846518929723359272> **You need report someone who scam you 
 $useChannel[$channelID[841670861576470568]]
 
 `
-}, 14400000)
+}, 12000000)
 
 
 bot.LoopCommand({
@@ -433,7 +433,7 @@ bot.LoopCommand({
 $useChannel[$channelID[835529866228793385]]
 
 `
-}, 14400000)
+}, 12000000)
 
 bot.LoopCommand({
  name: "this can be anything, its just reference",
@@ -443,4 +443,24 @@ bot.LoopCommand({
 $useChannel[$channelID[835529832413659196]]
 
 `
-}, 14400000)
+}, 12000000)
+
+
+bot.Command({
+name: "scam",
+code: `
+$deletecommand[10s]
+$deleteIn[60s]
+$color[ff0000]
+$author[New Scammer: $username[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
+$description[**<:success:835963544100536381> <@$mentioned[1;yes]> has just received the role scammer because he has __scam__:**
+Reason: \`\`\` $noMentionMessage[] \`\`\`
+<:staffcertified:842191648796180500> **Staff reporter:** <@$authorID> 
+ <a:aquestion:835626532310351952> **Thx for the report! (Delete in 60s <a:60:836617337851478076>)**
+ 
+ ]
+$giveRole[$mentioned[1;yes];$roleID[💢・Scammer];$noMentionMessage[]]
+  $argsCheck[>2;{description:**<:16211155394555210:843244763910242374> The command was misused**\nUsage: \`,scam @user Report by <reporter name> - Reason\`} {color:ff0000}]
+$onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;🌟・Admins;]
+`
+})
