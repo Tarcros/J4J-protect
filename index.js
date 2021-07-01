@@ -422,7 +422,7 @@ $description[<a:help:846518929723359272> **You need report someone who scam you 
 $useChannel[$channelID[841670861576470568]]
 
 `
-}, 3600000 )
+}, 14400000)
 
 
 bot.LoopCommand({
@@ -433,7 +433,7 @@ bot.LoopCommand({
 $useChannel[$channelID[835529866228793385]]
 
 `
-}, 28800000)
+}, 14400000)
 
 bot.LoopCommand({
  name: "this can be anything, its just reference",
@@ -443,4 +443,4 @@ bot.LoopCommand({
 $useChannel[$channelID[835529832413659196]]
 
 `
-}, 28800000)
+}, 14400000)
