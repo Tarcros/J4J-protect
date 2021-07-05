@@ -413,37 +413,6 @@ bot.Command({
  `
 })
 
-bot.LoopCommand({
- name: "this can be anything, its just reference",
- code:`
- $color[36393e]
-$description[<a:help:846518929723359272> **You need report someone who scam you or you need report a bot please report in <#$channelID[⛔・reports]>, use \`?tag report\` in <#$channelID[💻・commands]> for more infos.**
-]
-$useChannel[$channelID[841670861576470568]]
-
-`
-}, 12000000)
-
-
-bot.LoopCommand({
- name: "this can be anything, its just reference",
- code:`
- $deleteIn[1ms]
-<a:boostgreen:844446002404524052> **Dont forgot check perks of boosters**
-$useChannel[$channelID[835529866228793385]]
-
-`
-}, 12000000)
-
-bot.LoopCommand({
- name: "this can be anything, its just reference",
- code:`
- $deleteIn[1ms]
-<a:clover:830789995140743178> **Dont forgot check the roles you can get in our server for support us**
-$useChannel[$channelID[835529832413659196]]
-
-`
-}, 12000000)
 
 
 bot.Command({
@@ -464,3 +433,29 @@ $giveRole[$mentioned[1;yes];$roleID[💢・Scammer];$noMentionMessage[]]
 $onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;🌟・Admins;]
 `
 })
+
+
+bot.SpaceCommand({
+  name: "anti j4j",
+  code: `
+  $useChannel[$channelID[🚨・alert・anti・bots]]
+ $color[ff0000]
+ <@$authorID>
+ $author[Anti Self bot (Spam);https://media.discordapp.net/attachments/861433057259814912/861440215872700416/icon.png]
+$description[<a:alerte:861433838408433665> <@$authorID> **Was detected while using his self bot.**
+> <:search:861435050733338674> **Please analyze this message **
+\`\`\` $message[] \`\`\`
+> **Creation date:** \`$creationDate[$authorID]\`
+<a:help:846518929723359272> **Status of the user:** \`$status\`
+\`\`\`
+MessageID: $messageID
+User ID: $authorID $username #$discriminator
+\`\`\`
+]
+$thumbnail[$userAvatar[$authorID]]
+    $onlyForChannels[$channelID[🍀・j4j・fast];$channelID[🎋・j4j・ads];]
+    $onlyIfMessageContains[-spam;.spam;²spam;!spam;?spam;*spam;$spam;*spam;spam;:spam;%spam;>spam;<spam;'spam;~spam;&spam;+spam;=spam;|spam;/spam;?spam;!!spam;#spam;@spam;]
+ 
+      `
+  })
+
