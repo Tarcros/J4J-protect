@@ -445,8 +445,7 @@ bot.SpaceCommand({
 $description[<a:alerte:861433838408433665> <@$authorID> **Was detected while using his self bot.**
 > <:search:861435050733338674> **Please analyze this message **
 \`\`\` $message[] \`\`\`
-> **Creation date:** \`$creationDate[$authorID]\`
-<a:help:846518929723359272> **Status of the user:** \`$status\`
+> <a:help:846518929723359272> **Creation date:** \`$creationDate[$authorID]\`
 \`\`\`
 MessageID: $messageID
 User ID: $authorID $username #$discriminator
