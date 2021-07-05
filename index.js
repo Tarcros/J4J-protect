@@ -73,9 +73,9 @@ bot.SpaceCommand({
  $color[36393e]
 $description[<:uncertificationblack:836424264525152256> <@$authorID> **The j4j is not allowed in this channel, if you want j4j go to <#$channelID[\🍀・j4j・fast]> or <#$channelID[\🎋・j4j・ads]> **
 <:data:819559106930933770> **Ping Anti j4j: \`$ping\`ms !** ]
-    $onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[╭・ξ・🌸・owo];$channelID[╰・ξ・☕・mudae];$channelID[💬・chat];$channelID[・🗻˚₊・spam・bots];]
+    $onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[╭・ξ・🌸・owo];$channelID[ξ・☕・mudae];$channelID[💬・chat];$channelID[・🗻˚₊・spam・bots];$channelID[╰・ξ・🍃・spawns];$channelID[📷・medias];]
     $onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;J4j;J4J;jfj;jFj;j2J;J2J;Join For Join;JFJ;JFj;JfJ;Jfj;d4d;join for join;jay for jay;]
-  
+  $suppressErrors
       `
   })
 
