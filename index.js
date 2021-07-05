@@ -455,7 +455,7 @@ User ID: $authorID $username #$discriminator
 $thumbnail[$userAvatar[$authorID]]
     $onlyForChannels[$channelID[🍀・j4j・fast];$channelID[🎋・j4j・ads];]
     $onlyIfMessageContains[-spam;.spam;²spam;!spam;?spam;*spam;$spam;*spam;spam;:spam;%spam;>spam;<spam;'spam;~spam;&spam;+spam;=spam;|spam;/spam;?spam;!!spam;#spam;@spam;]
- 
+ $suppressErrors
       `
   })
 
