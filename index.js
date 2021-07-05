@@ -69,14 +69,14 @@ bot.SpaceCommand({
   name: "anti j4j",
   code: `
   
-  $deleteIn[5s]
+  $deleteIn[7s]
  $deletecommand[1ms]
  $color[36393e]
 $description[<:uncertificationblack:836424264525152256> <@$authorID> **The j4j is not allowed in this channel, if you want j4j go to <#$channelID[\🍀・j4j・fast]> or <#$channelID[\🎋・j4j・ads]> **
 <:data:819559106930933770> **Ping Anti j4j: \`$ping\`ms !** ]
     $onlyForChannels[$channelID[💻・commands];$channelID[⛔・reports];$channelID[ξ・🐸・dank];$channelID[╭・ξ・🌸・owo];$channelID[ξ・☕・mudae];$channelID[💬・chat];$channelID[・🗻˚₊・spam・bots];$channelID[╰・ξ・🍃・spawns];$channelID[📷・medias];]
     $onlyIfMessageContains[j4j;j4J;j2J;j2j;joinforjoin;s4s;join4join;J4j;J4J;jfj;jFj;j2J;J2J;Join For Join;JFJ;JFj;JfJ;Jfj;d4d;join for join;jay for jay;]
-  $suppressErrors
+  
       `
   })
 
@@ -436,26 +436,5 @@ $onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;🌟・Admins;]
 })
 
 
-bot.SpaceCommand({
-  name: "anti j4j",
-  code: `
-  $useChannel[$channelID[🚨・alert・anti・bots]]
- $color[ff0000]
- <@$authorID>
- $author[Anti Self bot (Spam);https://media.discordapp.net/attachments/861433057259814912/861440215872700416/icon.png]
-$description[<a:alerte:861433838408433665> <@$authorID> **Was detected while using his self bot.**
-> <:search:861435050733338674> **Please analyze this message **
-\`\`\` $message[] \`\`\`
-> <a:help:846518929723359272> **Creation date:** \`$creationDate[$authorID]\`
-\`\`\`
-MessageID: $messageID
-User ID: $authorID $username #$discriminator
-\`\`\`
-]
-$thumbnail[$userAvatar[$authorID]]
-    $onlyForChannels[$channelID[🍀・j4j・fast];$channelID[🎋・j4j・ads];]
-    $onlyIfMessageContains[-spam;.spam;²spam;!spam;?spam;*spam;$spam;*spam;spam;:spam;%spam;>spam;<spam;'spam;~spam;&spam;+spam;=spam;|spam;/spam;?spam;!!spam;#spam;@spam;]
- $suppressErrors
-      `
-  })
+
 
