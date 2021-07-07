@@ -41,6 +41,7 @@ bot.Status({
 
 
 
+
 bot.ReadyCommand({
   name: "835529885468196924",
   code:`
@@ -67,6 +68,18 @@ $onlyAdmin[]
 })
 
 
+bot.Command({
+name: "say",
+code: `
+$deletecommand
+$filter[$message[];@]
+$message[]
+$onlyAdmin[]
+`
+})
+
+
+
 bot.SpaceCommand({
   name: "anti j4j",
   code: `
@@ -81,6 +94,8 @@ $description[<:uncertificationblack:836424264525152256> <@$authorID> **The j4j i
   
       `
   })
+
+
 
 
 bot.Command({
