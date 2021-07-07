@@ -90,10 +90,10 @@ $deletecommand[1ms]
 $description[
 
 ╭ **\`⚠️\` __REPORTS RULES__ \`⚠️\`**
-・**<a:question:822003900252684308> :flag_us: If you find a bots/scammers/others report please <#$channelID[⛔・reports]> <a:starts:809253520796549121>**
-\`🍀\`**<a:question:822003900252684308> <a:Arrow1:819351001906544690> ( \`📸\` + @user + <@&821190545531338772> + Reason ) **
-・<a:question:822003900252684308> **:flag_tr: Botlar/dolandırıcılar/veya benzerlerini bulursanız, lütfen burada belirtin <#$channelID[⛔・reports]> <a:starts:809253520796549121> **
-**╰ <:XDM_Staff:835118888873623582> Thank you for the report(s) <a:ast:812882348806373426>**
+・**<a:aquestion:835626532310351952> :flag_us: If you find a bots/scammers/others report please <#$channelID[⛔・reports]> <a:awaow:835963608566726716>**
+\`🍀\`**<a:aquestion:835626532310351952> <a:awaow:835963608566726716> ( \`📸\` + @user + <@&835529569263550514> + Reason ) **
+・<a:aquestion:835626532310351952> **:flag_tr: Botlar/dolandırıcılar/veya benzerlerini bulursanız, lütfen burada belirtin <#$channelID[⛔・reports]> <a:greenflower:838147359660834846> **
+**╰ <:XDM_Staff:835118888873623582> Thank you for the report(s) <a:awaow:835963608566726716>**
 
 ]
 $color[ff0000]
