@@ -426,7 +426,7 @@ code: `
 $color[36393e]
 $author[Scam reason for $username[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
 $description[**<:success:835963544100536381> <@$mentioned[1;yes]> received the role scammer because he has __scam__:**
-<a:ior:835721070312816720> **Reason:** \`\`\` $getUserVar[infoscam;$mentioned[1;yes]] \`\`\`
+<a:ior:835721070312816720> **Reason:** \`\`\` $getUserVar[infoscams;$mentioned[1;yes]] \`\`\`
 <:staffcertified:842191648796180500> **Report manage by: <@$getUserVar[infoscamstaff;$mentioned[1;yes]]>** 
 > **Make the command \`?tag scammer\`for check how remove this role**
  ]
