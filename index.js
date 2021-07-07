@@ -170,27 +170,6 @@ $useChannel[$channelID[🍀・j4j・fast]]
 
 
 
-bot.Command({
-name: "scam",
-code: `
-
-$deletecommand[10s]
-$deleteIn[60s]
-$color[ff0000]
-$author[New Scammer: $username[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
-$description[**<:success:821885973012807691> <@$mentioned[1;yes]> has just received the role scammer because he has __scam__:**
-Reason: **" $message[] "**
-<:staffcertified:834979467419844628> **Staff reporter:** <@$authorID> 
- <a:question:822003900252684308> **Thx for the report! (Delete in 60s <<a:60:836617337851478076>)**
- 
- ]
-
-$giveRole[$mentioned[1;yes];$roleID[💢・Scammer];$noMentionMessage[]]
-  $argsCheck[>2;{description:**<:16211155394555210:843244763910242374> The command was misused**\nUsage: \`,scam @user Report by <reporter name> - Reason\`} {color:ff0000}]
-$onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;]
-
-`
-})
 
 
 bot.Command({
@@ -419,6 +398,7 @@ bot.Command({
 bot.Command({
 name: "scam",
 code: `
+
 $deletecommand[10s]
 $deleteIn[60s]
 $color[ff0000]
@@ -430,10 +410,32 @@ Reason: \`\`\` $noMentionMessage[] \`\`\`
  
  ]
 $giveRole[$mentioned[1;yes];$roleID[💢・Scammer];$noMentionMessage[]]
-  $argsCheck[>2;{description:**<:16211155394555210:843244763910242374> The command was misused**\nUsage: \`,scam @user Report by <reporter name> - Reason\`} {color:ff0000}]
-$onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;🌟・Admins;]
+  $argsCheck[>2;{description:**<:16211155394555210:843244763910242374> The command was misused**\nUsage: \`.scam @user Report by <reporter name> - Reason\`} {color:ff0000}]
+  $setUserVar[infoscam;$noMentionMessage[];$mentioned[1;yes]]
+   $setUserVar[infoscamstaff;$authorID;$mentioned[1;yes]]
+$onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;]
+
 `
 })
+
+
+bot.Command({
+name: "infoscam",
+code: `
+
+$color[36393e]
+$author[Scam reason for $username[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
+$description[**<:success:835963544100536381> <@$mentioned[1;yes]> received the role scammer because he has __scam__:**
+<a:ior:835721070312816720> **Reason:** \`\`\` $getUserVar[infoscam;$mentioned[1;yes]] \`\`\`
+<:staffcertified:842191648796180500> **Report manage by: <@$getUserVar[infoscamstaff;$mentioned[1;yes]]>** 
+> **Make the command \`?tag scammer\`for check how remove this role**
+ ]
+
+$onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;💢・Scammer;]
+
+`
+})
+
 
 
 
