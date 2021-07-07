@@ -412,9 +412,10 @@ Reason: \`\`\` $noMentionMessage[] \`\`\`
  
  ]
 $giveRole[$mentioned[1;yes];$roleID[💢・Scammer];$noMentionMessage[]]
-  $argsCheck[>2;{description:**<:16211155394555210:843244763910242374> The command was misused**\nUsage: \`.scam @user Report by <reporter name> - Reason\`} {color:ff0000}]
-  $setUserVar[infoscam;$noMentionMessage[];$mentioned[1;yes]]
+    $setUserVar[infoscam;$noMentionMessage[];$mentioned[1;yes]]
    $setUserVar[infoscamstaff;$authorID;$mentioned[1;yes]]
+   $onlyIf[$userExists[$mentioned[1;yes]==true;That user does not exist sorry.]
+   $argsCheck[>2;**<:16211155394555210:843244763910242374> The command was misused**\n > Usage: \`.scam @user Report by <reporter name> - Reason\`]
 $onlyForRoles[⛔・Report;🍀・Owner;🚧・Manager;]
 
 `
