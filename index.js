@@ -3,11 +3,11 @@ const discordScript = require("discordbot-script")
  
 const bot = new discordScript({
   token: "ODQ0NTgxNDAxMzE5NTcxNTQ2.YKUfuQ.3LhHNGODCcMbZHBjB-dBItgNEVU",
-  prefix: [","]
+  prefix: ["."]
 })
  
 bot.Variables({
-  prefix: ",",
+  prefix: ".",
   test: "1",
   iduserrankup: "nothing",
   idrolerankup: "nothing",
@@ -15,6 +15,8 @@ bot.Variables({
   channelembed: "nothing",
   channeledit: "nothing",
   messageedit: "nothing",
+  infoscam: "nothing",
+  infoscamstaff: "nothing",
  
   
 })
