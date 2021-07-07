@@ -71,8 +71,7 @@ $onlyAdmin[]
 bot.Command({
 name: "say",
 code: `
-$deletecommand
-$filter[$message[];@]
+$deletecommand[1ms]
 $message[]
 $onlyAdmin[]
 `
