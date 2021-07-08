@@ -98,7 +98,7 @@ $description[<:uncertificationblack:836424264525152256> <@$authorID> **The j4j i
 
 
 bot.Command({
-name: "report",
+name: "2report",
 code: `
 $deletecommand[1ms]
 $description[
